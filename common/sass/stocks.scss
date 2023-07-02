@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'Imprint';
+     /* Браузер сначала попробует найти шрифт локально */
+     src:   local("Imprint MT Shadow"),
+    /* Если не получилось, загрузит с сервера */
+    url('../fonts/Imprint.ttf') format('truetype'),
+    url('../fonts/ImprintMT-Shadow.woff2') format('woff2'),
+    url('../fonts/ImprintMT-Shadow.woff') format('woff');
+}
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'); // импортируем из Google Fonts
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+  //импорт шрифтов закончен
+
+    // основные настройки
+html, body{
+  height: 100%;
+  width: 100%;
+}
+ul li {
+    list-style: none;
+}
+li {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 25px;
+} 
+* {
+    padding: 0;
+    margin: 0;
+} 
+h1 {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 45px;
+  }
+  
+  .conteiner {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  header {
+    width: 100%;
+    height: 90px;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  // Навбар
+  .menu{
+    background: #272624;
+  }
+  .wrapper {
+    background-image: url(../../images/header-pattern.png);
+    list-style: none;
+    display: flex;    
+  }
+  .menu-list-slash{
+    margin:  31px 16px 0px 18.5px;
+    color: #fff;
+  }
+  .menu-list {
+   margin-right: 90px;
+   margin-top: 30px;
+  }
+  
+  .menu-link:hover {
+    -webkit-text-decoration: underline #fff solid;
+    text-decoration: underline #fff solid;
+  }
+  
+  .menu-list-accaunt, .menu-list-login{
+    margin-top: 33px;
+  }
+
+  .menu-list-logo {
+    margin: 14px 206px 0 60px;
+  }
+  
+  .menu-link {
+    color: #fff;
+  }
+//   Хедер закончен
+
+
+
+// основной блок
+
+.stocks-main-blocks{
+  width: 1880px;
+  margin: 0 auto;
+}
+.stocks-block-2{
+  margin-left: 290px;  
+}
+.stocks-block-3{
+  margin-left: 520px;  
+}
+.stocks-main-heading{
+  margin: 50px 0 50px 170px;
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 55px;
+  line-height: 45px;
+  text-decoration-line: underline;
+  color: #333333;
+}
+.stocks-block-img{
+  margin: 10px;
+}
+
+
+  // Футер
+.footer{
+    height: 300px;
+    background-color: #272624;
+    margin-top: 50px;
+}
+.footer-block-1{
+    display: flex;
+    padding-top: 44px;
+    margin-left: 266px;
+}
+.footer-list{
+    margin-left: 40px;
+    margin-top: 20px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: #A3A3A3;
+}
+.footer-block-2{
+    padding-left: 391px;
+    margin-top: 15px;
+}
+.footer-block-2-flex{
+    display: flex;
+}
+.footer-page{
+    margin-top: 5px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: #A3A3A3;
+}

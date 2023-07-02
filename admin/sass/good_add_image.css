@@ -1,0 +1,254 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@font-face {
+  font-family: "Imprint";
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Imprint MT Shadow"), url("../fonts/Imprint.ttf") format("truetype"), url("../fonts/ImprintMT-Shadow.woff2") format("woff2"), url("../fonts/ImprintMT-Shadow.woff") format("woff");
+}
+ul li {
+  list-style: none;
+}
+
+li {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 25px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.conteiner {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: 82px;
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu {
+  background: #272624;
+}
+
+.wrapper {
+  background-image: url(../../images/header-pattern.png);
+  list-style: none;
+  display: flex;
+}
+
+.menu-list-slash {
+  margin: 31px 16px 0px 18.5px;
+  color: #fff;
+}
+
+.menu-list {
+  margin-right: 90px;
+  margin-top: 30px;
+}
+
+.menu-link:hover {
+  -webkit-text-decoration: underline #fff solid;
+  text-decoration: underline #fff solid;
+}
+
+.menu-list-accaunt, .menu-list-login {
+  margin-top: 33px;
+}
+
+.menu-list-logo {
+  margin: 14px 206px 0 60px;
+}
+
+.menu-link {
+  color: #fff;
+}
+
+.main-block {
+  background-color: #EBEBE7;
+  min-height: 870px;
+  height: 100%;
+}
+
+.admin-heading {
+  text-decoration: underline;
+  margin-left: 600px;
+  margin-top: 50px;
+}
+
+.exit-button {
+  padding-top: 50px;
+  padding-left: 300px;
+  font-family: Inter;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.exit-button > a {
+  color: #272624;
+}
+
+.sidebar-input {
+  width: 360px;
+  padding: 23px 20px 23px 20px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  margin-top: 20px;
+  font-size: 15px;
+  margin-left: 700px;
+}
+
+.inputs-flex {
+  display: flex;
+  margin-top: 20px;
+}
+
+.inputs-flex > input {
+  margin-left: 20px;
+}
+
+.inputs-flex > input:nth-child(1) {
+  margin-left: 600px;
+}
+
+.sidebar-input-submit {
+  cursor: pointer;
+  width: 180px;
+  margin: 24px 0 30px 860px;
+  outline: none;
+  border: none;
+  background-color: #CC9966;
+  padding: 2px 20px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 40px;
+  color: #FFFFFF;
+  border-radius: 10px;
+}
+
+input[type=file] {
+  display: none; /* скрываем стандартный элемент input type="file" */
+}
+
+.custom-file-upload {
+  margin-left: 850px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.custom-file-upload:hover {
+  color: white;
+  background-color: #CC9966;
+}
+
+.custom-file-upload i {
+  margin-right: 5px;
+}
+
+/* стилизуем область перетаскивания файлов */
+input[type=file]::-webkit-file-upload-drag-and-drop-area {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+/* стилизуем стандартную кнопку "Выбрать файл" */
+input[type=file]::-webkit-file-upload-button {
+  background-color: #007bff;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* стилизуем элемент input type="file" при получении фокуса */
+input[type=file]:focus {
+  outline: none;
+  box-shadow: 0 0 3px #007bff;
+}
+
+.error-message {
+  text-align: center;
+  margin-left: -90px;
+}
+
+.slider {
+  box-shadow: -10px 0 10px -10px rgba(0, 0, 0, 0.5), 10px 0 10px -10px rgba(0, 0, 0, 0.5);
+  width: 1000px;
+  height: 300px;
+  overflow: scroll;
+  margin-left: 450px;
+  display: flex;
+}
+
+.slider::-webkit-scrollbar {
+  width: 0;
+}
+
+.slide {
+  max-width: 200px;
+  max-height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: transform 0.3s;
+  margin-left: 30px;
+  margin-top: 50px;
+}
+
+.slide:last-of-type {
+  margin-right: 30px;
+}
+
+.slide:hover {
+  transform: scale(1.1);
+  outline: 2px solid blue;
+  cursor: pointer;
+}
+
+.selected {
+  transform: scale(1.1);
+  outline: 2px solid blue;
+}
+
+#deletebutton-container > button {
+  font-weight: "Inter";
+  font-size: 20px;
+  font-weight: bold;
+  border-color: #D3A247;
+  background-color: #faf5ec;
+  width: 275px;
+  height: 46px;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-left: 750px;
+}
+
+#deletebutton-container > button:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=good_add_image.css.map */

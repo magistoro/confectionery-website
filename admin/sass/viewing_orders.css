@@ -1,0 +1,21 @@
+.back-button {
+  margin-top: 25px;
+  margin-left: 1600px;
+  position: absolute;
+  color: rgba(var(--text-color));
+  border: 2px double transparent;
+  background-image: linear-gradient(rgb(221, 221, 255), rgb(221, 221, 255)), radial-gradient(circle at left top, rgb(1, 110, 218), rgb(217, 0, 192));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+a.my-link {
+  color: white;
+  text-decoration: none;
+}
+
+a.my-link:hover {
+  text-decoration: none;
+}/*# sourceMappingURL=viewing_orders.css.map */

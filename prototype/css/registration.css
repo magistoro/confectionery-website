@@ -1,0 +1,49 @@
+#js-AddressField {
+    display: inline-block;
+    vertical-align: middle;
+    border-width: 1px;
+    border-style: solid;
+    border-color: gray;
+    height: 30px;
+    line-height: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 2px;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 2px;
+    box-shadow: 0 0 1px rgba(128,128,128,1);
+    width: 200px;
+  }
+  .u-AhunterSuggestions
+  { 
+    margin-left: 10px;
+    margin-top: 20px;
+    border: 1px solid #AAAAAA;
+    background: white; 
+    overflow: auto; 
+    border-radius: 2px;
+  }
+  .u-AhunterSuggestion
+  { 
+    padding: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .u-AhunterEmptySuggestion
+  {
+    margin-left: 100px;
+    padding: 5px;  
+    font-style: italic;
+    color: #b8661f;
+  }
+  .u-AhunterSelectedSuggestion   
+  { 
+    padding-left: 10px;
+    background: #E7E7E7; 
+  }
+  .u-AhunterSuggestions strong  
+  { 
+    font-weight: bold; 
+    color: #1B7BB1; 
+  }

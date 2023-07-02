@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 1</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="js/vue.js"></script>
+    
+</head>
+
+<body>
+    <div class="container mt-3">
+        <div class="sample">
+            <h3>Cake builder</h3>
+            <hr>
+            <button class="btn btn-primary" @click="addLayer">Add layer</button>
+            <hr>
+            <div class="row">
+                <div class="col col-sm-6">
+                    <div class="cake" v-for="layer in layers">
+                        <div class="layer" :class="'layer-' + layer.layerType"
+                            :style="{ height: layer.height * 10 + 'px'}" @click="increaseLayer(layer)"
+                            @contextmenu.prevent="decreaseLayer(layer)">
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-sm-6">
+                    <table class="table table-bordered" v-show="hasLayers">
+                        <tr>
+                            <th>Type</th>
+                            <th>Height</th>
+                            <th>Actions</th>
+                        </tr>
+                        <tr v-for="layer, i in layers">
+                            <td>
+                                <select v-model="layer.layerType">
+                                    <option v-for="layer, i in layerTypes" v-bind:value="i">{{ layer.title }}
+                                    </option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" v-model.number="layer.height">
+                            </td>
+                            <td><button class="btn btn-danger" @click="removeLayer(i)">Remove</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <hr>
+            <div class="alert alert-success price">
+                <span class="price">{{ getPrice }} руб.</span>
+                <button class="btn btn-warning">Order now!</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    layers: [
+                    ],
+                    layerTypes: {
+                        biscuit: {
+                            price: 10,
+                            title: 'Бисквит'
+                        },
+                        beze: {
+                            price: 100,
+                            title: 'Безе'
+                        },
+                        curd: {
+                            price: 50,
+                            title: 'Творожный'
+                        },
+                    },
+                    currentLayer: 'biscuit',
+                    currentHeight: 5,
+                };
+            }, computed: {
+                getPrice() {
+                    let price = 0;
+
+                    for (let i = 0; i < this.layers.length; i++) {
+                        const height = this.layers[i].height;
+                        const layerType = this.layers[i].layerType;
+
+                        price += this.layerTypes[layerType].price * height;
+                    }
+
+                    return price;
+                },
+                hasLayers() {
+                    return this.layers.length > 0;
+                }
+            }, methods: {
+                addLayer() {
+                    this.layers.push({
+                        layerType: this.currentLayer,
+                        height: this.currentHeight,
+                    });
+                },
+                removeLayer(i) {
+                    this.layers.splice(i, 1);
+                },
+                increaseLayer(layer) {
+                    layer.height++;
+                },
+                decreaseLayer(layer) {
+                    layer.height = layer.height === 1 ? 1 : layer.height - 1;
+                }
+            }
+        });
+
+        const root = app.mount('.sample');
+        console.log(root)
+    </script>
+</body>
+
+</html>

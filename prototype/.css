@@ -1,0 +1,460 @@
+label.u-Checkbox {
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    height: 20px
+  }
+  
+  label.u-Checkbox * {
+    vertical-align: middle
+  }
+  
+  label.u-Checkbox input {
+    display: none
+  }
+  
+  label.u-Checkbox .u-CheckboxMarker {
+    display: inline-block;
+    box-sizing: border-box;
+    height: 20px;
+    width: 20px;
+    border-radius: 2px;
+    line-height: 20px
+  }
+
+  label.u-Checkbox:hover input:not(:checked) ~ .u-CheckboxMarker {
+    opacity: .5
+  }
+  
+  label.u-Checkbox .u-CheckboxMarker::before {
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+    top: 3px;
+    left: 8px;
+    content: "";
+    width: 6px;
+    height: 12px;
+    border: 0 solid white;
+    transform: rotate(45deg)
+  }
+  
+  label.u-Checkbox input:checked ~ .u-CheckboxMarker::before {
+    border: solid white;
+    border-width: 0 2px 2px 0
+  }
+  
+  .u-TabActive {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    background-color: white
+  }
+  
+  .u-TabActive:before {
+    display: block;
+    content: "";
+    height: 2px;
+    font-size: .1px
+  }
+  
+  .u-TabActive:after {
+    display: block;
+    content: "";
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    background-color: inherit;
+    box-shadow: none;
+    box-sizing: border-box
+  }
+  
+  .u-TabInactive {
+    position: relative;
+    z-index: 0;
+    background-color: #f4f4ff
+  }
+  
+  .u-TabInactive:after {
+    display: block;
+    content: " ";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: -1px;
+    background-color: inherit
+  }
+  
+  .u-TabFirst {
+    border-top-left-radius: 2px
+  }
+  
+  .u-TabLast {
+    border-top-right-radius: 2px
+  }
+  
+  .u-StickerLeft {
+    padding: 1em;
+    box-shadow: 5px 5px 7px rgba(128,128,128,0.5);
+    transform: rotate(-4deg);
+    box-sizing: border-box;
+    line-height: 1.5em;
+    width: 250px;
+    height: 250px
+  }
+  
+  .u-StickerRight {
+    padding: 1em;
+    box-shadow: 5px 5px 7px rgba(128,128,128,0.5);
+    transform: rotate(4deg);
+    box-sizing: border-box;
+    line-height: 1.5em;
+    width: 250px;
+    height: 250px
+  }
+  
+  .u-StickerYellow {
+    background-color: #ffffa0
+  }
+  
+  .u-StickerGreen {
+    background-color: #cfc
+  }
+  
+  .u-StickerPurple {
+    background-color: #ccf
+  }
+  
+  .u-StickerPink {
+    background-color: #ffc0ff
+  }
+  
+  .u-ClientLogoBox {
+    height: 120px;
+    text-align: center
+  }
+  
+  .u-ClientLogo {
+    opacity: .8;
+    transition: transform .15s linear;
+    -webkit-transition: -webkit-transform .15s linear;
+    -o-transition: -o-transform .15s linear;
+    -moz-transition: -moz-transform .15s linear;
+    display: block
+  }
+  
+  .u-ClientLogo:hover {
+    opacity: 1.0;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -moz-transform: scale(1.1)
+  }
+  
+  .u-Warning {
+    color: red
+  }
+  
+  .u-Error {
+    color: red;
+    padding-top: 2px
+  }
+  
+  .u-Bar {
+    border-radius: 2px;
+    border-width: 1px;
+    border-style: solid
+  }
+  
+  .u-BarMin {
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle
+  }
+  
+  .u-BarStd {
+    height: 25px;
+    line-height: 25px;
+    text-align: center
+  }
+  
+  .u-BarMax {
+    height: 30px;
+    line-height: 30px;
+    text-align: center
+  }
+  
+  .u-ToolBar {
+    height: 33px;
+    max-height: 33px;
+    text-align: center;
+    vertical-align: middle
+  }
+  
+  .u-ToolDelimiter {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    width: 7px;
+    min-width: 7px;
+    line-height: 0
+  }
+  
+  .u-ToolDelimiter .u-ToolDelimiterLine {
+    height: 29px;
+    border-left-width: 1px;
+    border-left-style: solid;
+    width: 1px;
+    display: inline-block
+  }
+  
+  .u-ToolSquare {
+    width: 32px
+  }
+  
+  .u-Handle {
+    width: 32px;
+    cursor: move
+  }
+  
+  .u-Handle .ui-icon {
+    margin-left: auto;
+    margin-right: auto
+  }
+  
+  .u-ProgressBarContainer {
+    color: grey;
+    background-position: center center;
+    background-image: url("/pics/registry/progressbar.gif");
+    border: 1px solid #9bdd9b;
+    border-radius: 2px;
+    max-width: 245px
+  }
+  
+  .u-ProgressBarContainer * {
+    color: grey
+  }
+  
+  .u-ProgressBar {
+    height: 100%;
+    border-radius: 2px;
+    border-color: #9bdd9b;
+    background-color: #d4f9d2;
+    background-image: -webkit-linear-gradient(top,#fff,#9bdd9b 50%);
+    background-image: -o-linear-gradient(top,#fff,#9bdd9b 50%);
+    background-image: -moz-linear-gradient(top,#fff,#9bdd9b 50%);
+    background-image: -ms-linear-gradient(top,#fff,#9bdd9b 50%);
+    background-image: -webkit-linear-gradient(top bottom,#fff,#9bdd9b 50%)
+  }
+  
+  .u-Article {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 35px;
+    padding-right: 35px
+  }
+  
+  .u-Article.u-ArticleMid {
+    padding: 15px
+  }
+  
+  .u-Article h1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #b8661f
+  }
+  
+  .u-Article h1:first-child {
+    padding-top: 0
+  }
+  
+  .u-Article h2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #b8661f
+  }
+  
+  .u-Article h3 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #b8661f
+  }
+  
+  .u-Article a,.u-Article a:visited {
+    text-decoration: none;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    padding-bottom: 1px;
+    cursor: pointer;
+    color: #1b7bb1;
+    border-bottom-color: #1b7bb1
+  }
+  
+  .u-Article .n-Local,.u-Article .n-Local:visited {
+    text-decoration: none;
+    border-bottom-width: 1px;
+    border-bottom-style: dashed;
+    padding-bottom: 3px;
+    cursor: pointer
+  }
+  
+  .u-Article a:hover:not(.u-Button) {
+    color: #008bff;
+    border-bottom-color: #008bff
+  }
+  
+  .u-Article p {
+    line-height: 1.5em;
+    text-indent: 1.5em;
+    text-align: justify;
+    padding-bottom: 5px
+  }
+  
+  .u-Article pre,.u-Article pre span,.u-Article .t-Code {
+    font-family: Courier New;
+    font-size: 10pt
+  }
+  
+  .u-Article ul {
+    list-style-position: inside;
+    list-style-type: square
+  }
+  
+  .u-Article ol {
+    list-style-position: inside
+  }
+  
+  .u-Article ul li,.u-Article ol li {
+    line-height: 1.5em;
+    padding-bottom: 15px;
+    text-align: justify
+  }
+  
+  .u-Article ul li:last-of-type,.u-Article ol li:last-of-type {
+    padding-bottom: 5px
+  }
+  
+  .u-Article ul ul,.u-Article ol ol,.u-Article ul ol,.u-Article ol ul {
+    padding-left: 30px
+  }
+  
+  .u-Article .t-CommandName {
+    color: #1b7bb1
+  }
+  
+  .u-Article .t-ParamName {
+    color: #0063ff
+  }
+  
+  .u-Article .t-ParamValue {
+    color: #9b0000
+  }
+  
+  .u-Article .t-Sample {
+    color: #9b0000
+  }
+  
+  .u-Article .t-MarkupName {
+    color: blue;
+    font-family: Courier New
+  }
+  
+  .u-Article .t-MarkupAttr {
+    color: red;
+    font-family: Courier New
+  }
+  
+  .u-Article .t-MarkupValue {
+    color: #a31515;
+    font-family: Courier New
+  }
+  
+  .u-Article .t-VarName {
+    color: #0063ff;
+    font-family: Courier New
+  }
+  
+  .u-Article .t-VarValue {
+    color: #9b0000;
+    font-family: Courier New
+  }
+  
+  .u-Article .t-FuncName {
+    color: #8080c0;
+    font-family: Courier New
+  }
+  
+  .u-Article .t-FileName {
+    color: #9b0000
+  }
+  
+  .u-Article .t-Comment {
+    color: green
+  }
+  
+  .u-PopupMenu,.u-PopupMenu.ui-menu {
+    display: inline-block;
+    width: auto;
+    padding: 5px;
+    text-align: left;
+    float: none;
+    clear: both;
+    z-index: 1000
+  }
+  
+  .u-PopupMenuColumn {
+    display: inline-block;
+    vertical-align: top
+  }
+  
+  .u-PopupMenuItem {
+    width: auto;
+    list-style-type: none;
+    display: block;
+    white-space: nowrap;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 5px;
+    padding-left: 5px
+  }
+  
+  .u-PopupMenuItem:hover {
+    background-color: #bbc;
+    color: white
+  }
+  
+  .u-PopupMenuItemHasChildren {
+    padding-right: 20px;
+    position: relative;
+    vertical-align: middle
+  }
+  
+  .u-PopupMenuItemHasChildren:after {
+    content: "\25B8";
+    position: absolute;
+    right: 0;
+    vertical-align: middle;
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    top: 50%;
+    line-height: 1em;
+    margin-top: -0.5em
+  }
+  
+  .u-PopupMenu .ui-menu .ui-menu-item-wrapper.ui-widget-content,.u-PopupMenu .ui-menu .ui-menu-item-wrapper.ui-state-focus,.u-PopupMenu .ui-menu .ui-menu-item-wrapper.ui-state-active {
+    font-weight: normal
+  }
+  
+  .u-MenuDelimiter {
+    padding: 0
+  }
+  
+  .u-Highlighted {
+    background-color: #ddd
+  }

@@ -1,0 +1,875 @@
+    //импорт шрифтов
+@font-face {
+    font-family: 'Imprint';
+     /* Браузер сначала попробует найти шрифт локально */
+     src:   local("Imprint MT Shadow"),
+    /* Если не получилось, загрузит с сервера */
+    url('../fonts/Imprint.ttf') format('truetype'),
+    url('../fonts/ImprintMT-Shadow.woff2') format('woff2'),
+    url('../fonts/ImprintMT-Shadow.woff') format('woff');
+}
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap'); // импортируем из Google Fonts
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+  //импорт шрифтов закончен
+
+    // основные настройки
+ul li {
+    list-style: none;
+}
+li {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 25px;
+} 
+* {
+    padding: 0;
+    margin: 0;
+} 
+h1 {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 45px;
+  }
+  
+  .conteiner {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  header {
+    width: 100%;
+    height: 1000px;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+    background-image: url(../images/main-heading.png);
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  // Навбар
+  .menu{
+    background-image: url(../images/header-pattern.png);
+  }
+  .wrapper {
+    list-style: none;
+    display: flex;    
+  }
+  .menu-list-slash{
+    margin:  31px 16px 0px 18.5px;
+    color: #fff;
+  }
+  .menu-list {
+   margin-right: 90px;
+   margin-top: 30px;
+  }
+  
+  .menu-list-accaunt, .menu-list-login{
+    margin-top: 33px;
+  }
+
+  .menu-list-logo {
+    margin: 14px 206px 0 60px;
+  }
+  
+  .menu-link {
+	color: #fff;
+	color: #fff;
+	&:hover {
+		-webkit-text-decoration: underline #fff solid;
+		text-decoration: underline #fff solid;
+		-webkit-text-decoration: underline #fff solid;
+		text-decoration: underline #fff solid;
+	}
+}
+
+  // хедер
+.header-heading{
+    max-width: 1088px;
+    margin-left: 160px;
+    margin-top: 180px;
+    font-family: 'Imprint';  
+    font-style: normal;
+    font-weight: 400;
+    font-size: 128px;
+    line-height: 99.3%;
+    letter-spacing: 0.105em;
+    color: #FFFFFF;
+    text-shadow: 0px 19px 25px rgba(0, 0, 0, 0.25);
+}  
+.header-page{
+    max-width: 1204px;
+    margin-left: 160px;
+    margin-top: 40px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    color: #FFFFFF;
+}
+.heading-buttons, .block-bestOfMonth-cards, .block-bestOfMonth-card-buttons, .blocks-aboutUs-1, .blocks-aboutUs-2, .blocks-aboutUs-3{ ////////////////////////////////////////////////////////////////////////////
+    display: flex;
+}
+.catalog-button, .individual_order-button{
+    border: 5px solid #FFFFFF;
+    border-radius: 15px;
+    margin-top: 55px;
+}
+.catalog-button{
+    margin-left: 160px;
+    margin-right: 60px;
+}
+.catalog-button-page, .individual_order-button-page{
+    font-family: 'Inter'; 
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    color: #FFFFFF;
+    padding: 25px 85px;
+}
+//  мини блок подписки
+.block-mini_subscribe{
+    min-height: 131px;
+    display: flex;
+    background-color: #272624;
+}
+
+.more-desserts-page{
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 35px;
+    color: #F3F3F3;
+    margin: 54px 253px 0 150px;
+}
+.logo-page{
+    margin-top: 52px;
+    font-family: 'Imprint';
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.08em;
+    color: #F3F3F3;
+    text-transform: uppercase;
+}
+.subscribe-button{
+    border: 1px solid #FFFFFF;
+    margin: 42px 100px;
+    cursor: pointer;
+}
+.subscribe-button{
+    padding: 14px 30px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #F3F3F3;
+}
+.bestOfMonth-heading{
+    margin: 58px 0 0 390px;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 42px;
+    letter-spacing: 0.5px;
+    color: #333333;
+}
+.block-bestOfMonth-cards{
+    margin-top: 35px;
+}
+.block-bestOfMonth-card{
+    border: 2px solid #272624;
+    border-radius: 20px;
+
+}
+.block-bestOfMonth-card-img{
+    background-size:    auto;
+    max-width: 267px;
+    max-height: 274px;
+}
+.block-bestOfMonth-card{
+    align-items: center;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.block-bestOfMonth-card-name{
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    color: #373A3C;
+}
+.block-bestOfMonth-card-weight{
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #373A3C;
+}
+.block-bestOfMonth-card-price{
+    padding: 16px 0;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #373A3C;
+}
+.block-bestOfMonth-card{
+    margin-right: 24px;
+}
+.block-bestOfMonth-card:nth-child(1){
+    margin-left: 390px;
+}
+.block-bestOfMonth-card-count{
+    display: flex;
+    border: 1px solid #000000;
+    border-radius: 16px;
+    margin: 0 15px;
+}
+.block-bestOfMonth-card-count-page{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #333333;
+    padding: 5px 15px;
+}
+.block-bestOfMonth-card-basket-button{
+    background: #D3A247;
+    border-radius: 16px;
+}
+.block-bestOfMonth-card-basket-button-page{
+    padding: 0 16px;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+// слайдер 
+.filling-slider{
+    padding-top: 60px;
+    width: 1820px;
+    height: 550px;
+    margin: 0 70px;
+    overflow: scroll;
+    display: flex;
+}
+.filling-slider::-webkit-scrollbar {
+    width: 0;
+  }
+.filling-block{
+    overflow: hidden;
+    border: 1px solid #93918D;
+    border-radius: 20px;
+    margin-right: 20px;
+    min-width: 435px;
+    height: auto;
+}
+.filling-block:last-child{
+    margin-right: 0;
+}
+
+// .filling-block:hover{
+//     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+// }
+
+.filling-image{
+    margin-top: -2px;
+    max-height: 275px;
+    width: 440px;
+    border-radius: 20px;
+}
+.filling-heading{
+    margin: 50px 0 30px 42px;
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 42px;
+    letter-spacing: 0.5px;
+    color: #333333;
+}
+.filling-page{
+    margin-left: 42px;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #333333;
+}
+.block-orderNow{
+    height: 350px;
+    background-color: rgba(211, 162, 71, 0.2);
+    margin-top: 50px; 
+    padding-top: 70px; 
+}
+.orderNow-fill{
+    padding-top: 70px; 
+    margin-left: 390px;
+    width: 1140px;
+    height: 200px;
+    display: flex;
+    background-color: #fff;
+    border-radius: 20px;
+}
+.orderNow-block-1{
+    margin-left: 70px;
+}
+.orderNow-block-2{
+    margin-left: 55px;
+}
+.orderNow-input{
+    width: 200px;
+    height: 46px;
+    border: 1px solid #F3F3F3;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding-left: 25px;
+}
+.orderNow-input[type="text"] {
+    font-size: 16px;
+}
+.orderNow-heading{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 42px;
+    color: #333333;
+}
+.orderNow-page{
+    margin-top: 25px;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #333333;
+}
+.orderNow-page-2{
+    margin-top: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    color: #7C7C7C;   
+}
+.g-recaptcha{
+    border-radius: 15px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.orderNow-span{
+    text-decoration:underline;
+}
+.orderNow-button-page{
+    background-color: #D3A247;
+    width: 300px;
+    height: 46px;
+    border-radius: 20px;
+    margin-left: 0px;
+    margin-top: 3px;
+    text-transform: uppercase;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 40px;
+    color: #FFFFFF;
+    border: none;
+}
+.orderNow-button-page:hover{
+    cursor: pointer;
+}
+.section-aboutUs{
+    margin-top: 80px;
+    margin-left: 178px;
+}
+.aboutUs-heading{
+    margin-bottom: 60px;
+    margin-top: 120px;
+}
+.aboutUs-page{
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 48px;
+    color: #000000;
+}
+.aboutUs-page-1{
+    max-width: 763px;;
+}
+.aboutUs-page-2{
+    max-width: 844px;;
+}
+.aboutUs-page-3{
+    max-width: 848px;;
+}
+.aboutUs-image-1{
+    margin-left: 120px;
+}
+.aboutUs-image-3{
+    margin-left: 120px;
+    margin-top: -60px;
+}
+.aboutUs-block{
+    margin-top: 100px;
+    display: flex;
+}
+.abountUs-client-heading{
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 79px;
+    line-height: 96px;
+    color: #E8D47F;
+}
+.abountUs-client-heading-span{
+    color:#272624;
+}
+.aboutUs-button{
+    border: 5px solid #000000;
+    border-radius: 15px;
+    margin-left: 244px;
+    margin-top: 95px;
+}
+.aboutUs-button:hover:not(.aboutUs-button-page){
+    filter: drop-shadow(4px 4px 7px rgba(0, 0, 0, 0.25));
+}
+.aboutUs-button-page{
+    padding: 25px 60px;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    color: #000000;
+}
+// Футер
+.footer{
+    height: 300px;
+    background-color: #272624;
+    margin-top: 170px;
+}
+.footer-block-1{
+    display: flex;
+    padding-top: 44px;
+    margin-left: 266px;
+}
+.footer-list{
+    margin-left: 40px;
+    margin-top: 20px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: #A3A3A3;
+}
+.footer-block-2{
+    padding-left: 391px;
+    margin-top: 15px;
+}
+.footer-block-2-flex{
+    display: flex;
+}
+.footer-page{
+    margin-top: 5px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: #A3A3A3;
+}
+
+
+@media screen and (max-width: 480px){
+    .conteiner {
+        max-width: 480px;
+        width: 100%;
+        margin: 0 auto;
+      }
+      
+      header {
+        width: 100%;
+        height: 520px;
+        background-position: center center;
+        background-size: cover;
+        overflow: hidden;
+        background-image: url(../images/main-heading-for-telephone.png);
+      }
+      
+      a {
+        text-decoration: none;
+      }
+      .menu-list{
+        display: none;
+      }
+      // Навбар
+      .menu{
+        background-image: url(../images/header-pattern.png);
+      }
+      .wrapper {
+        list-style: none;
+        display: flex;    
+      }
+      .menu-list-slash{
+        margin:  31px 16px 0px 18.5px;
+        color: #fff;
+      }
+      .menu-list {
+       margin-right: 90px;
+       margin-top: 30px;
+      }
+      
+      .menu-link:hover {
+        -webkit-text-decoration: underline #fff solid;
+        text-decoration: underline #fff solid;
+      }
+      
+      .menu-list-accaunt, .menu-list-login{
+        margin-top: 33px;
+      }
+    
+      .menu-list-logo {
+        margin: 14px 206px 0 60px;
+      }
+      
+      .menu-link {
+        color: #fff;
+      }
+    
+      // хедер
+    .header-heading{
+        max-width: 372px;
+        margin-left: 28px;
+        margin-top: 52px;
+        font-family: 'Imprint';  
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 99.3%;
+        letter-spacing: 0.105em;
+        color: #FFFFFF;
+        text-shadow: 0px 19px 25px rgba(0, 0, 0, 0.25);
+    }  
+    .header-page{
+        max-width: 420px;
+        margin-left: 28px;
+        margin-top: 12px;
+        font-family: 'Inter';
+        line-height: 1.5;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        color: #FFFFFF;
+    }
+    .heading-buttons, .blocks-aboutUs-1, .blocks-aboutUs-2, .blocks-aboutUs-3{ ////////////////////////////////////////////////////////////////////////////
+        display: flex;
+    }
+    .catalog-button, .individual_order-button{
+        border: 5px solid #FFFFFF;
+        border-radius: 15px;
+    }
+    .catalog-button{
+        margin: 25px 38px 0 28px;
+    }
+    .individual_order-button{
+        margin-top: 25px;
+    }
+    .catalog-button-page, .individual_order-button-page{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        color: #FFFFFF;        
+        padding: 3px 28px;
+    }
+    //  мини блок подписки
+    .block-mini_subscribe{
+        min-height: 131px;
+        display: flex;
+        background-color: #272624;
+    }
+    .subscribe-button{
+        border: 1px solid #FFFFFF;
+        margin: 42px 100px;
+        cursor: pointer;
+    }
+    .subscribe-button{
+        padding: 14px 30px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+        color: #F3F3F3;
+    }
+ 
+    .more-desserts-page{
+        font-family: 'Inter';
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 35px;
+        color: #F3F3F3;
+        margin: 54px 22px 0 26px;
+    }
+    .logo-page{
+        display: none;
+    }
+    .subscribe-button{
+        border: 1px solid #FFFFFF;
+        margin: 42px 10px;
+        cursor: pointer;
+        padding: 14px 30px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 26px;
+        color: #F3F3F3;
+    }
+
+    //слайдер
+    .bestOfMonth-heading{
+    margin: 28px 0 0 28px;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 42px;
+    letter-spacing: 0.5px;
+    color: #333333;
+    }
+    .filling-slider{
+        padding-top: 30px;
+        width: 400px;
+        height: 220px;
+        margin: 0 30px;
+        overflow: scroll;
+        display: flex;
+    }
+    .filling-slider::-webkit-scrollbar {
+        width: 0;
+      }
+    .filling-block{
+        overflow: hidden;
+        border: 1px solid #93918D;
+        border-radius: 20px;
+        margin-right: 10px;
+        min-width: 150px;
+        height: auto;
+    }
+    
+    // .filling-block:hover{
+    //     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+    // }
+    
+    .filling-image{
+        margin-top: -2px;
+        max-height: 275px;
+        width: 150px;
+        border-radius: 20px;
+    }
+    .filling-heading{
+        margin: 0 0 0 15px;
+        font-family: 'Inter';
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 42px;
+        color: #333333;
+    }
+    .filling-page{
+        margin-left: 22px;
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 12px;
+        color: #333333;
+    }
+    // слайдер закончен
+
+    .block-orderNow{
+        height: 280px;
+        background-color: rgba(211, 162, 71, 0.2);
+        margin-top: 20px; 
+        padding-top: 20px; 
+        display:block;
+    }
+    .orderNow-fill{
+        padding-top: 10px;
+        margin-left: 30px;
+        width: 420px;
+        height: 250px;
+        display: block;
+        background-color: #fff;
+        border-radius: 20px;
+    }
+    .orderNow-block-1{
+        margin-left: 70px;
+    }
+    .orderNow-block-2{
+        margin-left: 55px;
+    }
+    .orderNow-input{
+        width: 500px;
+        height: 46px;
+        border: 1px solid #F3F3F3;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
+        border-radius: 20px;
+        padding-left: 25px;
+    }
+    .orderNow-input[type="text"] {
+        font-size: 16px;
+    }
+    .orderNow-heading{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 42px;
+        color: #333333;
+    }
+    .orderNow-page{
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+  
+    .orderNow-span{
+        text-decoration:underline;
+    }
+    .orderNow-button{
+        background-color: #D3A247;
+        width: 275px;
+        height: 46px;
+        border-radius: 20px;
+        margin-top: 20px;
+        margin-left: 50px;
+    }
+  
+    .section-aboutUs{
+        margin-top: 0;
+        margin-left: 33px;
+    }
+    .aboutUs-heading{
+        margin-bottom: 0px;
+        margin-top: 10px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 48px;
+        color: #000000;
+    }
+    .aboutUs-page{
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 9px;
+        line-height: 15px;
+        color: #000000;
+    }
+    .aboutUs-page-1{
+        max-width: 218px;
+    }
+    .aboutUs-page-2{
+        max-width: 218px;
+    }
+    .aboutUs-page-3{
+        max-width: 218px;;
+    }
+    .aboutUs-image-1{
+        margin-left: 25px;
+        margin-top: 50px;
+        height: 162px;
+    }
+    .aboutUs-image-2{
+        height: 174px;
+        margin-top: 50px;
+        margin-right: 20px;
+    }
+    .aboutUs-image-3{
+        margin-top: 25px;
+        margin-left: 25px;
+        height: 182px;
+    }
+    .aboutUs-block{
+        margin-top: 30px;
+        display: flex;
+    }
+    .abountUs-client-heading{
+        font-family: 'Inter';
+        font-weight: 600;
+        font-size: 79px;
+        line-height: 96px;
+        color: #E8D47F;
+    }
+    .abountUs-client-heading-span{
+        color:#272624;
+    }
+    .aboutUs-button{
+        border: 3px solid #000000;
+        border-radius: 15px;
+        margin-left: 15px;
+        margin-top: 20px;
+    }
+    .aboutUs-button:hover:not(.aboutUs-button-page){
+        filter: drop-shadow(4px 4px 7px rgba(0, 0, 0, 0.25));
+    }
+    .aboutUs-button-page{
+        padding: 6px 30px;
+        font-family: 'Inter';
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 44px;
+        color: #000000;
+    }
+    .abountUs-client-heading{
+        font-size: 32px;
+        line-height: 1;
+    }
+    .bestOfMonth-display, .orderNow-page-2  {
+        display: none;
+    }
+    // Футер
+    .footer{
+        height: 300px;
+        background-color: #272624;
+        margin-top: 40px;
+    }
+    .footer-block-1{
+        display: flex;
+        padding-top: 44px;
+        margin-left: 26px;
+    }
+    .footer-list{
+        margin-left: 5px;
+        margin-top: 20px;
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 20px;
+        color: #A3A3A3;
+    }
+    .footer-block-2{
+        padding-left: 100px;
+        margin-top: 15px;
+    }
+    .footer-block-2-flex{
+        display: flex;
+    }
+    .footer-page{
+        margin-top: 5px;
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 20px;
+        color: #A3A3A3;
+    }
+    .footer-logo{
+        height: 43px;
+        margin-top: 5px;
+    }
+}

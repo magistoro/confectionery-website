@@ -1,0 +1,90 @@
+// маски инпута 
+$(".phone-input").mask("+7(999) 999-99-99", {autoclear: false});
+
+var options = { id : 'js-AddressField' };
+
+//запускаем модуль
+AhunterSuggest.Address.Solid( options );
+
+
+function validateForm() {
+  // Получаем все поля формы
+  var formInputs = document.forms["registrationForm"].querySelectorAll('input:not(#withoutverification, #js-AddressField)');
+
+  // Флаг для проверки заполнения всех полей
+  var isValid = true;
+  var messageValid = true;
+  // Флаг для проверки поля электронной почты
+  var emailIsValid = true;
+  
+  // Проверяем каждое поле на заполненность
+  for (var i = 0; i < formInputs.length; i++) {
+      if (formInputs[i].value === "") {
+          // Если поле пустое, добавляем красную рамку
+          formInputs[i].style.border = "1px solid #FF3300";
+          isValid = false;
+          messageValid = false;
+
+      } else {
+          // Иначе убираем красную рамку
+          formInputs[i].style.border = "";
+      }
+  }
+
+  // Проверяем поле с email на наличие знака "@"
+  var emailInput = document.getElementById("email");
+  if (emailInput && emailInput.value.indexOf("@") === -1) {
+      emailInput.style.border = "1px solid #FF3300";
+      emailIsValid = false;
+      isValid = false;
+  }
+
+  // Если есть ошибки, выводим сообщение
+  if (!isValid) {
+      var message = "";
+      if (!emailIsValid && !messageValid) {
+          message = "Множетсво ошибок!";
+      } else if(!messageValid) {
+          message = "Пожалуйста заполните обязательные поля";
+      } else {
+        message = "Может ты забыл знак @? Важный ингредиент!";
+      }
+      
+      var div = document.createElement("error-div");
+      div.innerHTML = message;
+      div.style.backgroundColor = "#FF3300";
+      div.style.color = "white";
+      div.style.padding = "10px";
+      div.style.position = "fixed";
+      div.style.top = "50%";
+      div.style.left = "50%";
+      div.style.transform = "translate(-50%, -50%)";
+      div.style.borderRadius = "10px";
+      document.body.appendChild(div);
+      setTimeout(function() {
+        document.body.removeChild(div);
+      }, 3000);
+  }
+  
+  return isValid;
+}
+
+
+
+var orderButtonBlock = document.getElementById("order-price-button-block"); // Кнопка оформить заказ, и всплывающее окно
+var orderButton = document.getElementById("order-price-button"); 
+var confirmationMessage = document.getElementById("confirmation-message");
+
+orderButtonBlock.parentElement.addEventListener("mouseenter", function () {
+    if (orderButton.disabled) {
+      confirmationMessage.style.opacity = "1";
+      confirmationMessage.style.pointerEvents = "auto";
+    }
+  });
+  
+  orderButtonBlock.parentElement.addEventListener("mouseleave", function () {
+    if (orderButton.disabled) {
+      confirmationMessage.style.opacity = "0";
+      confirmationMessage.style.pointerEvents = "none";
+    }
+  });

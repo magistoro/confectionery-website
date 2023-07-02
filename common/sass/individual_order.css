@@ -1,0 +1,172 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@font-face {
+  font-family: "Imprint";
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Imprint MT Shadow"), url("../fonts/Imprint.ttf") format("truetype"), url("../fonts/ImprintMT-Shadow.woff2") format("woff2"), url("../fonts/ImprintMT-Shadow.woff") format("woff");
+}
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+ul li {
+  list-style: none;
+}
+
+li {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 25px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 45px;
+}
+
+.conteiner {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: 90px;
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu {
+  background: #272624;
+}
+
+.wrapper {
+  background-image: url(../../images/header-pattern.png);
+  list-style: none;
+  display: flex;
+}
+
+.menu-list-slash {
+  margin: 31px 16px 0px 18.5px;
+  color: #fff;
+}
+
+.menu-list {
+  margin-right: 90px;
+  margin-top: 30px;
+}
+
+.menu-link:hover {
+  -webkit-text-decoration: underline #fff solid;
+  text-decoration: underline #fff solid;
+}
+
+.menu-list-accaunt, .menu-list-login {
+  margin-top: 33px;
+}
+
+.menu-list-logo {
+  margin: 14px 206px 0 60px;
+}
+
+.menu-link {
+  color: #fff;
+}
+
+body {
+  background-color: #EBEBE7;
+}
+
+.container {
+  height: 100%;
+  background-image: url(../../images/login-background.png);
+  background-size: cover;
+}
+
+.order-heading {
+  margin-bottom: 40px;
+  margin-top: 80px;
+  text-align: center;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 45px;
+  text-decoration-line: underline;
+  color: #333333;
+}
+
+.order-form {
+  margin-left: 810px;
+}
+
+.order-form input[type=text], .order-form input[type=tel] {
+  width: 340px;
+  margin-bottom: 20px;
+  padding: 25px 0 20px 25px;
+  outline: none;
+  border: 1px solid #F3F3F3;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+}
+
+.order-form textarea {
+  width: 315px;
+  margin-bottom: 20px;
+  padding: 25px 25px 20px 25px;
+  outline: none;
+  border: 1px solid #F3F3F3;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 15px;
+  resize: vertical;
+}
+
+.order-basic-button {
+  margin-left: 70px;
+  width: 230px;
+  background-color: #CC9966;
+  padding: 10px 20px 10px 25px;
+  color: #fff;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 40px;
+  border-radius: 20px;
+  border: none;
+}
+
+.order-additional-buttons {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 40px;
+  border: none;
+  background-color: red;
+}
+
+.RegButton {
+  margin-top: 20px;
+  margin-left: 115px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  text-decoration-line: underline;
+  color: #373A3C;
+}/*# sourceMappingURL=individual_order.css.map */

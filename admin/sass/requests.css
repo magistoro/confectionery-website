@@ -1,0 +1,206 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@font-face {
+  font-family: "Imprint";
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Imprint MT Shadow"), url("../fonts/Imprint.ttf") format("truetype"), url("../fonts/ImprintMT-Shadow.woff2") format("woff2"), url("../fonts/ImprintMT-Shadow.woff") format("woff");
+}
+ul li {
+  list-style: none;
+}
+
+li {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 25px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 45px;
+}
+
+.conteiner {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: 82px;
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu {
+  background: #272624;
+}
+
+.wrapper {
+  background-image: url(../../images/header-pattern.png);
+  list-style: none;
+  display: flex;
+}
+
+.menu-list-slash {
+  margin: 31px 16px 0px 18.5px;
+  color: #fff;
+}
+
+.menu-list {
+  margin-right: 90px;
+  margin-top: 30px;
+}
+
+.menu-link:hover {
+  -webkit-text-decoration: underline #fff solid;
+  text-decoration: underline #fff solid;
+}
+
+.menu-list-accaunt, .menu-list-login {
+  margin-top: 33px;
+}
+
+.menu-list-logo {
+  margin: 14px 206px 0 60px;
+}
+
+.menu-link {
+  color: #fff;
+}
+
+.main-block {
+  background-color: #EBEBE7;
+  min-height: 870px;
+  height: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.admin-heading {
+  text-decoration: underline;
+  padding-top: 60px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.request-page {
+  font-size: 18px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+input[type=text] {
+  width: 200px;
+  height: 46px;
+  border: 1px solid #F3F3F3;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  padding-left: 25px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+input[type=number] {
+  width: 200px;
+  height: 46px;
+  border: 1px solid #F3F3F3;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+input[type=submit] {
+  background-color: #D3A247;
+  width: 150px;
+  height: 46px;
+  border-radius: 20px;
+  color: #EBEBE7;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+input[type=date] {
+  width: 130px;
+  height: 46px;
+  border: 1px solid #F3F3F3;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-bottom: 20px;
+  margin: 20px;
+}
+
+input[type=submit]:hover {
+  cursor: pointer;
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2), 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#select-request-1 {
+  width: 300px; /* Укажите ширину вашего выбора */
+  padding: 10px;
+  border: none; /* Удалить границу */
+  background-color: #f2f2f2; /* Цвет фона */
+  border-radius: 4px; /* Закругленные углы */
+  font-size: 16px;
+  margin-right: 20px;
+  margin-bottom: 40px;
+}
+
+#select-request-1 option {
+  padding: 10px;
+}
+
+#select-request-1:focus {
+  outline: none;
+  background-color: #f8f8f8; /* Цвет фона при фокусе */
+}
+
+#select-request-1:hover {
+  background-color: #f8f8f8; /* Цвет фона при наведении */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Тень при фокусе */
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: #f9f9f9;
+}
+
+td:first-child {
+  font-weight: bold;
+}/*# sourceMappingURL=requests.css.map */

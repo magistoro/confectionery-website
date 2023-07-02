@@ -1,0 +1,265 @@
+@font-face {
+    font-family: 'Imprint';
+     /* Браузер сначала попробует найти шрифт локально */
+     src:   local("Imprint MT Shadow"),
+    /* Если не получилось, загрузит с сервера */
+    url('../fonts/Imprint.ttf') format('truetype'),
+    url('../fonts/ImprintMT-Shadow.woff2') format('woff2'),
+    url('../fonts/ImprintMT-Shadow.woff') format('woff');
+}
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'); // импортируем из Google Fonts
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+  //импорт шрифтов закончен
+
+    // основные настройки
+ul li {
+    list-style: none;
+}
+li {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 25px;
+} 
+* {
+    padding: 0;
+    margin: 0;
+} 
+h1 {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 45px;
+  }
+  
+  .conteiner {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  header {
+    width: 100%;
+    height: 82px;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  // Навбар
+  .menu{
+    background: #272624;
+  }
+  .wrapper {
+    background-image: url(../../images/header-pattern.png);
+    list-style: none;
+    display: flex;    
+  }
+  .menu-list-slash{
+    margin:  31px 16px 0px 18.5px;
+    color: #fff;
+  }
+  .menu-list {
+   margin-right: 90px;
+   margin-top: 30px;
+  }
+  
+  .menu-link:hover {
+    -webkit-text-decoration: underline #fff solid;
+    text-decoration: underline #fff solid;
+  }
+  
+  .menu-list-accaunt, .menu-list-login{
+    margin-top: 33px;
+  }
+
+  .menu-list-logo {
+    margin: 14px 206px 0 60px;
+  }
+  
+  .menu-link {
+    color: #fff;
+  }
+// Навбар закончен
+
+.main-block{
+    background-color: #EBEBE7;
+    min-height: 870px;
+    height: 100%;
+    padding-left: 190px;
+}
+.admin-heading{
+    text-decoration: underline;
+    padding-top: 60px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+.admin-flex{
+    display: flex;
+}
+.admin_button{
+    color: #EBEBE7;
+    background-color: #CC9966;
+    width: 290px;
+    margin-top: 20px;
+    padding: 9px 0;
+    border-radius: 15px;
+    text-align: center;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
+    display: block;
+    border: none;
+    cursor: pointer;
+}
+.admin_button:hover{
+  box-shadow: 2px 2px 5px rgba(204, 153, 102, 0.5);
+}
+.sidebar-vector{
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 225px;
+    pointer-events: none;
+}
+#drop-downPanel-type{
+    display: none;
+    height: 200px;
+    overflow: scroll;
+    width: 300px;
+    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, .5);
+    
+}
+#drop-downPanel-type::-webkit-scrollbar {
+    width: 0;
+  }
+#drop-downPanel-type > ul > form > li{
+    border: #93918D 1px solid;
+    border-radius: 5px;
+    max-width: 200px;
+    margin-left: 45px;
+    margin-top: 10px;
+    text-align: center;
+}
+#drop-downPanel-type > ul > form > li > input{
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Inter";
+  font-weight: bold;
+  color: #5b6060;
+  border-radius: 5px;
+  font-family: "Inter";
+  font-size: 18px;
+}
+#drop-downPanel-type > ul > form > li:nth-child(1) {
+    margin-top: 15px;
+}
+.sidbar-input{
+    padding: 23px 220px 23px 20px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, .5);
+}
+.products{
+    width: 1200px;
+    margin-left: 110px;
+}
+// вывод поиска
+.product-card {
+  border: 1px solid #ccc;
+  background-color: red;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+// стили карточек товара
+
+.good-card{
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 25px;
+    margin-left: 25px;
+    width: 320px;
+    height: 475px;
+    overflow: hidden;
+}
+.GoodIcon{
+    width: 320px;
+    height: 300px;
+    margin-top: -18px;
+    image-rendering: auto;
+}
+.good-card-page-flex{
+    display: flex;
+    margin-top: 20px;
+}
+.good-card-name{
+    margin-left:  30px;
+    width: 280px;
+    height: 48px;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #232323;
+}
+.good-card-price{
+    font-family: 'Inter';
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 24px;
+    color: #232323;
+}
+.good-card-button-basket{
+    cursor: pointer;
+    margin: 24px 0 30px 20px;
+    outline:none;
+    border: none;
+    background-color: #CC9966;
+    padding: 2px 20px;
+
+    font-family: 'Inter';   
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    color: #FFFFFF;
+    border-radius: 10px;
+}
+.button-flex{
+    display: flex;
+    margin-left: 20px;
+}
+.good-card-button-open{ 
+    cursor: pointer;
+    margin: 22px 0 0 20px;
+    outline:none;
+    border: none;
+    border: 3px solid #CC9966;
+    background-color: transparent;
+    padding: 0px 20px;
+
+    font-family: 'Inter';   
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    color: #000;
+    border-radius: 10px;
+}
+#show-more{
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 600;
+  border-radius: 15px;
+  border: #000 2px solid;
+  background-color: transparent;
+  padding: 15px 40px;
+  margin-bottom: 20px;
+  margin-left: 380px;
+}
+// вывод товаров закончен
